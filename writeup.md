@@ -25,7 +25,7 @@ The goals / steps of this project are the following:
 [image6]: ./examples/sign3.png "Slippery road"
 [image7]: ./examplse/sign4.png "Priority road"
 [image8]: ./examples/sign5.png "No entry"
-[image9]: ./examplse/sign6.png" "Stop"
+[image9]: ./examplse/sign6.png "Stop"
 
 
 ## Rubric Points
