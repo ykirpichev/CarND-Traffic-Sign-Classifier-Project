@@ -81,44 +81,48 @@ Here is an example of an original image and an horizontally flipped image:
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
+I used modified LeNet architecture, since LeNet seems to be a good point to start.
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Input         		| 32x32x3 RGB image   							| 
-| Convolution 3x3     	| 1x1 stride, same padding, outputs 32x32x64 	|
+| Input         		| 32x32x1 RGB image   							| 
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 28x28x16 	|
 | RELU					|												|
-| Max pooling	      	| 2x2 stride,  outputs 16x16x64 				|
-| Convolution 3x3	    | etc.      									|
-| Fully connected		| etc.        									|
-| Softmax				| etc.        									|
-|						|												|
-|						|												|
+| Max pooling	      	| 2x2 stride,  outputs 14x14x16 				|
+| Convolution 3x3     	| 1x1 stride, valid padding, outputs 10x10x32 	|
+| RELU					|												|
+| Max pooling	      	| 2x2 stride,  outputs 5x5x16 				|
+| Fully connected		| input = 800, outputs = 120      									|
+| RELU					|												|
+| Fully connected		| input = 120, outputs = 84      									|
+| RELU					|												|
+| Fully connected		| input = 84, outputs = 43      									|
+| Softmax				|       									|
  
-
 
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
-To train the model, I used an ....
+To train the model, I used an AdamOptimizer with cross entropy loss function.
+I tried different batch size (128, 256), different number of epochs, different depth of convolution layer 1 and 2 and different learning rate.
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of ?
-* validation set accuracy of ? 
-* test set accuracy of ?
+* training set accuracy of 
+* validation set accuracy of 0.956
+* test set accuracy of 0.935
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-* What were some problems with the initial architecture?
-* How was the architecture adjusted and why was it adjusted? Typical adjustments could include choosing a different model architecture, adding or taking away layers (pooling, dropout, convolution, etc), using an activation function or changing the activation function. One common justification for adjusting an architecture would be due to overfitting or underfitting. A high accuracy on the training set but low accuracy on the validation set indicates over fitting; a low accuracy on both sets indicates under fitting.
-* Which parameters were tuned? How were they adjusted and why?
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
+I chose model described above, batch size 128, number of epochs 50, learning rate set to 0.005 and stopped trained as soon as validation accuracy get greater than 0.95.
+I used recommendation from lecture and took LeNet architecture and iterativly modified the batch size, number of epochs and any hyperparameters until I got necessary validation accuracy.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
+LeNet
 * Why did you believe it would be relevant to the traffic sign application?
+Because we have only 43 classes and it seems we can use moderate size network in order to classify them with a good accuracy.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
+Accuracy is greater than 90%, that means model will correctly classify more than 90 images out of 100.
  
 
 ###Test a Model on New Images
