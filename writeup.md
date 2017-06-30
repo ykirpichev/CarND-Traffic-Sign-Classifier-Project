@@ -104,14 +104,14 @@ My final model consisted of the following layers:
 ####3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
 To train the model, I used an AdamOptimizer with cross entropy loss function.
-I tried different batch size (128, 256), different number of epochs, different depth of convolution layer 1 and 2 and different learning rate.
+I tried different batch sizes, different number of epochs, different depths of convolution layers and different learning rates.
 
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy of 
+* training set accuracy 0.995
 * validation set accuracy of 0.956
-* test set accuracy of 0.935
+* test set accuracy of 0.937
 
 I chose model described above, batch size 128, number of epochs 50, learning rate set to 0.005 and stopped trained as soon as validation accuracy get greater than 0.95.
 I used recommendation from lecture and took LeNet architecture and iterativly modified the batch size, number of epochs and any hyperparameters until I got necessary validation accuracy.
@@ -122,19 +122,19 @@ LeNet
 * Why did you believe it would be relevant to the traffic sign application?
 Because we have only 43 classes and it seems we can use moderate size network in order to classify them with a good accuracy.
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
-Accuracy is greater than 90%, that means model will correctly classify more than 90 images out of 100.
+Accuracy is greater than 95%, that means model will correctly classify more than 95 images out of 100.
  
 
 ###Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are six German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][image7] ![alt text][image8] ![alt text][image9]
 
-The first image might be difficult to classify because ...
+The second and third images might be difficult to classify because there are extra signs on pictures. Others seems to be rather easy to classify.
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
