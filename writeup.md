@@ -23,9 +23,11 @@ The goals / steps of this project are the following:
 [image4]: ./examples/sign1.png "Right-of-way at the next intersection"
 [image5]: ./examples/sign2.png "General caution"
 [image6]: ./examples/sign3.png "Slippery road"
-[image7]: ./examplse/sign4.png "Priority road"
+[image7]: ./examples/sign4.png "Priority road"
 [image8]: ./examples/sign5.png "No entry"
-[image9]: ./examplse/sign6.png "Stop"
+[image9]: ./examples/sign6.png "Stop"
+[image10]: ./examples/original.png "Original"
+[image11]: ./examples/flipped.png "Flipped"
 
 
 ## Rubric Points
@@ -75,7 +77,7 @@ To add more data to the the data set, I used image flipping. It turned out that 
 
 Here is an example of an original image and an horizontally flipped image:
 
-![alt text][image3]
+![alt text][image10] ![alt text][image11]
 
 
 
