@@ -62,7 +62,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data ...
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed over classes. Some classes contains only little number of samples, this might cause a problem with accuracy for this classes.
 
 ![alt text][image1]
 
@@ -165,26 +165,28 @@ The model was able to correctly guess 4 of the 6 traffic signs, which gives an a
 
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+For the first image the model is relatively sure that this is a Right-of-way at the next intersection and the image  indeed contains a Right-of-way at the next intersection sign.
 ![alt text][image12]
+
+For the second image the model is relatively sure that this is a Roundabout mandatory sign but the image contains a General caution sign. 
 ![alt text][image13]
+
+For the third image the model predicted four classes with more or less equal probability but none of them is correct.
 ![alt text][image14]
+
+For the fourth image the model correctly classified that it is priority road sign.
 ![alt text][image15]
+
+For the fivth image the model correctly predicted that it is no entry sign.
 ![alt text][image16]
+
+For the sixth image the model correctly classified stop sign.
 ![alt text][image17]
-| Probability         	|     Prediction	        					| 
-|:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
 
-
-For the second image ... 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
+Here are visual outputs for conv1 and conv2 layers for two different images. As it is seen some features can be only identified on conv1 layer and conv2 layer seems to detect some high level features.
 ![alt text][image18]
 ![alt text][image19]
