@@ -51,7 +51,7 @@ You're reading it! and here is a link to my [project code](https://github.com/yk
 
 ####1. Provide a basic summary of the data set. In the code, the analysis should be done using python, numpy and/or pandas methods rather than hardcoding results manually.
 
-I used the pandas library to calculate summary statistics of the traffic
+I used numpy and pandas library to calculate summary statistics of the traffic
 signs data set:
 
 * The size of training set is 34799
@@ -62,7 +62,7 @@ signs data set:
 
 ####2. Include an exploratory visualization of the dataset.
 
-Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed over classes. Some classes contains only little number of samples, this might cause a problem with accuracy for this classes.
+Here is an exploratory visualization of the data set. It is a bar chart showing how the data is distributed over classes. Some classes contains only small number of samples, this might cause a problem with accuracy for this classes.
 
 ![alt text][image1]
 
@@ -76,9 +76,9 @@ Here is an example of a traffic sign image before and after grayscaling.
 
 ![alt text][image3] ![alt text][image2]
 
-As a last step, I normalized the image data because normalization helps model to converge more rapidly.
+As a last step, I normalized the image data because normalization helps model to converge more quickly.
 
-I decided to generate additional data because original training set contains not enough samples to achieve required level of error.
+I decided to generate additional data because original training set contains not enough samples to achieve required level of accuracy.
 
 To add more data to the the data set, I used image flipping. It turned out that it is enough to only add flipped images in order to get required accuracy on validation set. 
 
@@ -90,7 +90,7 @@ Here is an example of an original image and an horizontally flipped image:
 
 ####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
-I used modified LeNet architecture, since LeNet seems to be a good point to start.
+I used modified LeNet architecture, since LeNet seems to be a good starting point.
 My final model consisted of the following layers:
 
 | Layer         		|     Description	        					| 
@@ -122,8 +122,8 @@ My final model results were:
 * validation set accuracy of 0.956
 * test set accuracy of 0.937
 
-I chose model described above, batch size 128, number of epochs 50, learning rate set to 0.005 and stopped trained as soon as validation accuracy get greater than 0.95.
-I used recommendation from lecture and took LeNet architecture and iterativly modified the batch size, number of epochs and any hyperparameters until I got necessary validation accuracy.
+I chose model described above, batch size 128, number of epochs 50, learning rate set to 0.005 and stopped training as soon as get validation accuracy greater than 0.95.
+I used recommendation from lecture and took LeNet architecture and iterativly modified the batch size, number of epochs and hyperparameters until I got necessary validation accuracy.
 
 If a well known architecture was chosen:
 * What architecture was chosen?
@@ -163,30 +163,28 @@ The model was able to correctly guess 4 of the 6 traffic signs, which gives an a
 
 ####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image the model is relatively sure that this is a Right-of-way at the next intersection and the image  indeed contains a Right-of-way at the next intersection sign.
+For the first image the model is relatively sure that this is a "Right-of-way at the next intersection" sign and the image  indeed contains a "Right-of-way at the next intersection" sign.
 ![alt text][image12]
 
-For the second image the model is relatively sure that this is a Roundabout mandatory sign but the image contains a General caution sign. 
+For the second image the model is relatively sure that this is a "Roundabout mandatory" sign but the image contains a "General caution" sign. 
 ![alt text][image13]
 
-For the third image the model predicted four classes with more or less equal probability but none of them is correct.
+For the third image the model predicted four classes with more or less equal probabilities but none of them is correct.
 ![alt text][image14]
 
-For the fourth image the model correctly classified that it is priority road sign.
+For the fourth image the model correctly classified that it is "priority road" sign.
 ![alt text][image15]
 
-For the fivth image the model correctly predicted that it is no entry sign.
+For the fivth image the model correctly predicted that it is "no entry" sign.
 ![alt text][image16]
 
-For the sixth image the model correctly classified stop sign.
+For the sixth image the model correctly classified "stop" sign.
 ![alt text][image17]
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-Here are visual outputs for conv1 and conv2 layers for two different images. As it is seen some features can be only identified on conv1 layer and conv2 layer seems to detect some high level features.
+Here are visual outputs for conv1 and conv2 layers for two different images. As it is shown some features can only be identified on conv1 layer and conv2 layer seems to detect higher level features, but it is hard to understand what are exact features detected by conv2.
 ![alt text][image18]
 ![alt text][image19]
