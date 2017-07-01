@@ -18,8 +18,8 @@ The goals / steps of this project are the following:
 [//]: # (Image References)
 
 [image1]: ./examples/visualization.png "Visualization"
-[image2]: ./examples/grayscale.jpg "Grayscaling"
-[image3]: ./examples/random_noise.jpg "Random Noise"
+[image2]: ./examples/sample_gray.png "Grayscaling"
+[image3]: ./examples/sample.png "Sample image"
 [image4]: ./examples/sign1.png "Right-of-way at the next intersection"
 [image5]: ./examples/sign2.png "General caution"
 [image6]: ./examples/sign3.png "Slippery road"
@@ -28,7 +28,14 @@ The goals / steps of this project are the following:
 [image9]: ./examples/sign6.png "Stop"
 [image10]: ./examples/original.png "Original"
 [image11]: ./examples/flipped.png "Flipped"
-
+[image12]: ./examples/sample1.png "prediction 1"
+[image13]: ./examples/sample2.png "prediction 2"
+[image14]: ./examples/sample3.png "prediction 3"
+[image15]: ./examples/sample4.png "prediction 4"
+[image16]: ./examples/sample5.png "prediction 5"
+[image17]: ./examples/sample6.png "prediction 6"
+[image18]: ./examples/display_cnn1.png "display cnn 1"
+[image19]: ./examples/display_cnn2.png "display cnn 2"
 
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
@@ -67,7 +74,7 @@ As a first step, I decided to convert the images to grayscale because using colo
 
 Here is an example of a traffic sign image before and after grayscaling.
 
-![alt text][image2]
+![alt text][image3] ![alt text][image2]
 
 As a last step, I normalized the image data because normalization helps model to converge more rapidly.
 
@@ -159,7 +166,12 @@ The model was able to correctly guess 4 of the 6 traffic signs, which gives an a
 The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
 
 For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
-
+![alt text][image12]
+![alt text][image13]
+![alt text][image14]
+![alt text][image15]
+![alt text][image16]
+![alt text][image17]
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | .60         			| Stop sign   									| 
@@ -174,4 +186,5 @@ For the second image ...
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 ####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 
-
+![alt text][image18]
+![alt text][image19]
