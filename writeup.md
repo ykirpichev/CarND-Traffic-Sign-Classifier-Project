@@ -118,9 +118,9 @@ I tried different batch sizes, different number of epochs, different depths of c
 ####4. Describe the approach taken for finding a solution and getting the validation set accuracy to be at least 0.93. Include in the discussion the results on the training, validation and test sets and where in the code these were calculated. Your approach may have been an iterative process, in which case, outline the steps you took to get to the final solution and why you chose those steps. Perhaps your solution involved an already well known implementation or architecture. In this case, discuss why you think the architecture is suitable for the current problem.
 
 My final model results were:
-* training set accuracy 0.995
-* validation set accuracy of 0.956
-* test set accuracy of 0.937
+* training set accuracy 0.994
+* validation set accuracy of 0.955
+* test set accuracy of 0.929
 
 I chose model described above, batch size 128, number of epochs 50, learning rate set to 0.005 and stopped training as soon as get validation accuracy greater than 0.95.
 I used recommendation from lecture and took LeNet architecture and iterativly modified the batch size, number of epochs and hyperparameters until I got necessary validation accuracy.
@@ -169,7 +169,7 @@ For the first image the model is relatively sure that this is a "Right-of-way at
 For the second image the model is relatively sure that this is a "Roundabout mandatory" sign but the image contains a "General caution" sign. 
 ![alt text][image13]
 
-For the third image the model predicted four classes with more or less equal probabilities but none of them is correct.
+For the third image the model predicted two classes with more or less equal probabilities but none of them is correct.
 ![alt text][image14]
 
 For the fourth image the model correctly classified that it is "priority road" sign.
